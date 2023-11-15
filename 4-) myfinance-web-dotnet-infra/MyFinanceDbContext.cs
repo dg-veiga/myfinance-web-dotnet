@@ -12,9 +12,7 @@ public class MyFinanceDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=myfinance;Trusted_Connection=True;
-"); 
-        // Server=myServerAddress;Database=myDataBase;Trusted_Connection=True;
+        optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=myfinance;Trusted_Connection=True;TrustServerCertificate=True;"); 
 
         base.OnConfiguring(optionsBuilder);
     }
